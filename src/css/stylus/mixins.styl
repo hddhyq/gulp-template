@@ -1,0 +1,83 @@
+// 背景图
+bg-img($url)
+  background: url($url) no-repeat center
+  background-size: 100% 100%
+
+// 充满元素的背景图
+full-img($url)
+  width: image-size($url)[0]
+  height: image-size($url)[1]
+  background: url($url) no-repeat center
+  background-size: 100% 100%
+
+// 单行文本溢出
+single-line()
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// 多行文本溢出, 默认两行
+multi-line($n = 2)
+  overflow: hidden
+  display: -webkit-box
+  -webkit-line-clamp: $n
+  -webkit-box-orient: vertical
+
+// 聚焦隐藏placeholder
+hide-placeholder()
+  &:focus::-webkit-input-placeholder
+    color: transparent
+  &:focus::-moz-placeholder
+    color: transparent
+  &:focus::-moz-placeholder
+    color: transparent
+  &:focus:-ms-input-placeholder
+    color: transparent
+
+// placeholder的颜色
+color-placeholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &::-moz-placeholder
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+
+// 扩大点击区域
+click-area($size)
+  $size = (- $size)
+  &::before
+    content: '';
+    position: absolute;
+    top: $size; right: $size;
+    bottom: $size; left: $size;
+
+// 绝对定位居中
+absolute-center()
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+// flex居中
+flex-center()
+  display: flex
+  justify-content: center
+  align-items: center
+
+// 定位
+-pos(type, args)
+  i = 0
+  position: unquote(type)
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+  {args[i += 1]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+
+absolute()
+  -pos('absolute', arguments)
+
+fixed()
+  -pos('fixed', arguments)

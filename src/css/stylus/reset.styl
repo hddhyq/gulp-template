@@ -1,0 +1,83 @@
+/* CSS reset */
+html
+  color: #333
+  background: #FFF
+  font-family: 'Microsoft YaHei', Arial, '宋体'
+// 全局重置行高
+*
+  line-height: 1.5
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, strong
+  padding: 0
+  margin: 0
+  font-family: 'Microsoft YaHei', Arial, '宋体' !important
+table
+  border-collapse: collapse
+  border-spacing: 0
+fieldset, img
+  border: none
+a
+  text-decoration: none
+  color: #333
+  outline: none
+a:hover
+  color: #333
+var, em, strong
+  font-style: normal
+address, caption, cite, code, dfn, em, strong, th, var, optgroup
+  font-style: inherit
+  font-weight: inherit
+del, ins
+  text-decoration: none
+li
+  list-style: none
+caption, th
+  text-align: left
+h1, h2, h3, h4, h5, h6
+  font-size: 100%
+  font-weight: normal
+q:before, q:after
+  content: ''
+abbr, acronym
+  border: 0
+  font-variant: normal
+legend
+  color: #000
+input, button, textarea, select, optgroup, option
+  font-family: inherit
+  font-size: inherit
+  font-style: inherit
+  font-weight: inherit
+input, button, textarea, select
+  font-size: 100%
+  outline: none
+body
+  -webkit-user-select: none
+  -webkit-text-size-adjust: none
+  // font-size: 0 !important
+*
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -webkit-overflow-scrolling: touch
+/* 滚动条 */
+*::-webkit-scrollbar
+  width: 0
+  height: 0
+*::-webkit-scrollbar-thumb
+  border-radius: 10px
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+  background-color: #95b6ef
+img
+  -webkit-touch-callout: none
+input[type='submit'], input[type='reset'], input[type='button'], input[type=date], button, select, input[type=text]
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  -webkit-tap-highlight-color: transparent !important
+a, input[type=text], select, input[type=password], textarea
+  -webkit-tap-highlight-color: transparent !important
+input::-webkit-input-placeholder
+  color: #666
+.hide
+  display: none !important
+.show
+  display: block
