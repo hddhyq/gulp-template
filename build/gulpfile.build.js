@@ -99,7 +99,7 @@ const libs = async () => {
       .pipe(plumber())
       .pipe(uglify())
       .pipe(concat(`${distName}.vendor.js`))
-      .pipe(gulp.dest(Config.libs.dist + distName))
+      .pipe(gulp.dest(Config.libs.dist))
       .pipe(connect.reload());
   });
 
