@@ -39,7 +39,7 @@
     "gulp-if": "^2.0.2",
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.8",
+    "gulp-util": "https://github.com/wx170903/gulp-util.git#v3.0.8",
     "merge-stream": "^1.0.1",
     "minimist": "^1.2.0",
     "postcss-load-config": "^2.0.0",
